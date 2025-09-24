@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p style="font-family: cursive;">hola escribe algo :3</p>
+    <input id="numero1" type="text">
+    <button id="woton">presioname o muero!!!</button>
+    <p id="parrafo" style="font-family: cursive; color: blueviolet; font-size: 50px;"></p>
+    <script>
+        document.getElementById("woton").addEventListener("click", preguntarNumero)
+
+      function preguntarNumero(){
+            const val = document.getElementById( "numero1" ).value
+            document.getElementById("parrafo").innerHTML = val
+      }
+    </script>
+</body>
+</html>
