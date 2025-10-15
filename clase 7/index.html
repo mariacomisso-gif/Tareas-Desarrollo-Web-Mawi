@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            cursor: none;
+            height: 100vh;
+        }
+        .cursor-dot {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            transition: transform 0.1s linear;
+            transform: translate(-50%, -50%);
+        }
+
+
+    </style>
+</head>
+<body>
+     <div class="punterowo"></div>
+         <div id="cursor-container">
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-dot"></div>
+    </div>
+     <script>
+        document.addEventListener("mousemove", (e) => {
+const objs = document.getElementsByClassName ("cursor-dot")
+    estela.push([e.clientX, e.clientY])
+    if(estela.length > ojs.length) estela.shift()
+   for(let i = 0; i< objs.length; i++){
+    objs[i].style.top = estela[i][1] + "px"
+    objs[i].style.left = estela[i][0] + "px" }
+        })
+
+        
+     </script>
+</body>
+</html>
